@@ -1,0 +1,15 @@
+REPORT zdecisao.
+
+DATA: gv_numero TYPE i.
+
+START-OF-SELECTION.
+  gv_numero = 10.
+
+  " A barra / antes do texto manda pular uma linha antes de escrever
+  WRITE: 'O número analisado é: ', gv_numero.
+
+  IF gv_numero > 5.
+    WRITE: / 'Este número é maior que 5.'.
+  ELSE.
+    WRITE: / 'Este número é 5 ou menor.'.
+  ENDIF.
