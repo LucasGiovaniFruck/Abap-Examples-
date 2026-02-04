@@ -1,0 +1,16 @@
+REPORT zcalc.
+
+DATA: gv_num1      TYPE i,
+      gv_num2      TYPE i,
+      gv_resultado TYPE i.
+
+START-OF-SELECTION.
+  " Atribuindo valores
+  gv_num1 = 10.
+  gv_num2 = 5.
+
+  " Fazendo o cálculo
+  gv_resultado = gv_num1 + gv_num2.
+
+  " Exibindo o texto e o número na mesma linha
+  WRITE: 'A soma de 10 + 5 é:', gv_resultado.
