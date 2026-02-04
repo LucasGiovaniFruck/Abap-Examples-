@@ -1,0 +1,15 @@
+REPORT zloop_do.
+
+START-OF-SELECTION.
+  WRITE 'Iniciando a contagem...'.
+
+  DO 5 TIMES.
+    WRITE: / 'Volta número:', sy-index.
+  ENDDO.
+
+  WRITE: / 'Fim do loop.'.
+
+  " sy-index: Essa é uma Variável de Sistema. 
+  " O ABAP antigo tem várias dessas estruturas que 
+  " começam com sy-. A sy-index guarda *automaticamente 
+  " o número da volta atual do loop.
