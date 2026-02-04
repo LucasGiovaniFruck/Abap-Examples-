@@ -1,0 +1,17 @@
+REPORT zjoin.
+
+DATA: gv_parte1    TYPE string,
+      gv_parte2    TYPE string,
+      gv_resultado TYPE string.
+
+START-OF-SELECTION.
+  gv_parte1 = 'SAP'.
+  gv_parte2 = 'ABAP'.
+
+  " Juntar SEM espaço
+  CONCATENATE gv_parte1 gv_parte2 INTO gv_resultado.
+  WRITE: / 'Junto:', gv_resultado.
+
+  " Juntar COM espaço (SEPARATED BY)
+  CONCATENATE gv_parte1 gv_parte2 INTO gv_resultado SEPARATED BY ' '.
+  WRITE: / 'Separado:', gv_resultado.
