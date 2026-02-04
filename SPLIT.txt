@@ -1,0 +1,19 @@
+REPORT zsplit.
+
+DATA: gv_email   TYPE string,
+      gv_usuario TYPE string,
+      gv_dominio TYPE string.
+
+START-OF-SELECTION.
+  gv_email = 'aluno@escola.com'.
+
+  " Quebra o texto onde encontrar o @
+  SPLIT gv_email AT '@' INTO gv_usuario gv_dominio.
+
+  WRITE: / 'Email original:', gv_email.
+  WRITE: / 'Usuário:', gv_usuario.
+  WRITE: / 'Domínio:', gv_dominio.
+
+" Email original:aluno@escola.com
+" Usuário:aluno
+" Domínio:escola.com
